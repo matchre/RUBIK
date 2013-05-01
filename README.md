@@ -1,6 +1,4 @@
-Grain 3.0 : Simulation d'une machine turing 2D
+Grain 3.0 : Simulation d'un Rubik's cube 2x2
 ========
 
-[![Build Status](https://travis-ci.org/InriaMecsci/zero.png?branch=master)](https://travis-ci.org/InriaMecsci/zero)
-
-* [Le grain en action](http://inriamecsci.github.com/#!/grains/Turing-2D)
+* [Le grain en action](http://inriamecsci.github.com/#!/grains/rubiks-cube)
