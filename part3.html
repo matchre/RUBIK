@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<title>Rubik's Cube 2x2x2</title>
+</head>
+
+<style>
+		.moves_list {
+			width::100%;
+			margin:auto;
+		}
+		
+		.moves_list td {
+			width:1%;
+			text-align:center;
+			background-color:#d0d0d7;
+			border-width:1px;
+			border-style:solid;
+			border-color:#bbbbc6;
+			cursor:pointer;
+		}
+		
+		.queue {
+			width:100%;
+			background-color:#d0d0d7;
+			border-width:1px;
+			border-style:solid;
+			border-color:#bbbbc6;
+			height:25px;
+			text-align:center;
+		}
+		
+		.rubik_title {
+			font-weight:bold;
+			text-align:center;
+		}
+		
+		#webGL_error {
+			width:100%;
+			color:red;
+			text-align:center;
+		}
+	</style>
+	
+<body>
+
+	<div id="part3"><div style="padding:5px">
+	<div id="container3" style="margin:center;text-align:center;"></div>
+	<div class="rubik_title">Mouvements directs :</div>
+	<table class="moves_list">
+		<tr>
+			<td id="turnR-3">R</td>
+			<td id="turnR2-3">R<sup>2</sup></td>
+			<td id="turnR3-3">R<sup>-1</sup></td>
+			<td id="turnD-3">D</td>
+			<td id="turnD2-3">D<sup>2</sup></td>
+			<td id="turnD3-3">D<sup>-1</sup></td>
+			<td id="turnB-3">B</td>
+			<td id="turnB2-3">B<sup>2</sup></td>
+			<td id="turnB3-3">B<sup>-1</sup></td>
+		</tr>
+	</table>
+	<div class="rubik_title">Ajouter à la queue :</div>
+	<table class="moves_list">
+		<tr>
+			<td id="QturnR-3">R</td>
+			<td id="QturnR2-3">R<sup>2</sup></td>
+			<td id="QturnR3-3">R<sup>-1</sup></td>
+			<td id="QturnD-3">D</td>
+			<td id="QturnD2-3">D<sup>2</sup></td>
+			<td id="QturnD3-3">D<sup>-1</sup></td>
+			<td id="QturnB-3">B</td>
+			<td id="QturnB2-3">B<sup>2</sup></td>
+			<td id="QturnB3-3">B<sup>-1</sup></td>
+		</tr>
+	</table>
+	<div class="rubik_title">Queue :</div>
+	<div id="Queue3" class="queue"></div>
+	<div class="rubik_title">Actions :</div>
+	<table class="moves_list">
+		<tr>
+			<td id="Solve3">Résoudre</td>
+			<td id="goQueue3">Lancer</td>
+			<td id="StepByStep3">Pas à pas</td>
+			<td id="Shuffle3">Mélanger</td>
+		</tr>
+	</table>
+</div>
+
+<!-- Includes -->
+
+<script src="vendor/jquery.js"></script>
+<script src="vendor/Three.js"></script>
+<script src="vendor/Detector.js"></script>
+<script src="vendor/Stats.js"></script>
+<script src="vendor/THREEx.KeyboardState.js"></script>
+<script src="vendor/THREEx.FullScreen.js"></script>
+<script src="vendor/THREEx.WindowResize.js"></script>
+
+<script src="js/functions.js"></script>
+<script src="js/Action.class.js"></script>
+<script src="js/Rubik.class.js"></script>
+<script src="js/Cube.class.js"></script>
+<script src="js/Application.class.js"></script>
+<script src="js/rubiks.js"></script>
+
+<script>
+<?php
+	$fichier='table.txt';
+	$contenu = fread(fopen($fichier, "r"), filesize($fichier));
+	echo 'indexTable = "'.$contenu.'";'; 
+?>
+
+</script>
+
+</body>
+</html>

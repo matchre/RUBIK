@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<title>Rubik's Cube 2x2x2</title>
+</head>
+
+<style>
+		.moves_list {
+			width::100%;
+			margin:auto;
+		}
+		
+		.moves_list td {
+			width:1%;
+			text-align:center;
+			background-color:#d0d0d7;
+			border-width:1px;
+			border-style:solid;
+			border-color:#bbbbc6;
+			cursor:pointer;
+		}
+		
+		.queue {
+			width:100%;
+			background-color:#d0d0d7;
+			border-width:1px;
+			border-style:solid;
+			border-color:#bbbbc6;
+			height:25px;
+			text-align:center;
+		}
+		
+		.rubik_title {
+			font-weight:bold;
+			text-align:center;
+		}
+		
+		#webGL_error {
+			width:100%;
+			color:red;
+			text-align:center;
+		}
+	</style>
+	
+<body>
+
+	<div id="part2"><div style="padding:5px">
+	<div id="container2" style="margin:center;text-align:center;"></div>
+
+	<div id="Queue1" class="queue"></div>
+	<div class="rubik_title">Actions :</div>
+	<table class="moves_list">
+		<tr>
+			<td id="Shuffle2">Lancer</td>
+		</tr>
+	</table>
+</div></div>
+
+<!-- Includes -->
+
+<script src="vendor/jquery.js"></script>
+<script src="vendor/Three.js"></script>
+<script src="vendor/Detector.js"></script>
+<script src="vendor/Stats.js"></script>
+<script src="vendor/THREEx.KeyboardState.js"></script>
+<script src="vendor/THREEx.FullScreen.js"></script>
+<script src="vendor/THREEx.WindowResize.js"></script>
+
+<script src="js/functions.js"></script>
+<script src="js/Action.class.js"></script>
+<script src="js/Rubik.class.js"></script>
+<script src="js/Cube.class.js"></script>
+<script src="js/Application.class.js"></script>
+<script src="js/rubiks.js"></script>
+
+<script>
+<?php
+	$fichier='table.txt';
+	$contenu = fread(fopen($fichier, "r"), filesize($fichier));
+	echo 'indexTable = "'.$contenu.'";'; 
+?>
+
+</script>
+
+</body>
+</html>
