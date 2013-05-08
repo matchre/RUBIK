@@ -3,10 +3,11 @@
     "width": "800px",
 	"height": "600px",
     "comment" : "Simulation d'un Rubik's cube 2x2",
+    "link" : "http://interstices.info/rubik",
     "links" : [
         {
             "title" : "Document original dans lequel s'insère ce grain",
-            "uri" : "http://interstices.info/jcms/c_42150/resoudre-le-mini-rubiks-cube"
+            "uri" : "http://interstices.info/rubik"
         }
     ],
     "authors" : [
