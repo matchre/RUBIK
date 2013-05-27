@@ -1,7 +1,7 @@
 {
     "name": "rubiks-cube",
     "width": "800px",
-	"height": "600px",
+    "height": "600px",
     "comment" : "Simulation d'un Rubik's cube 2x2",
     "link" : "http://interstices.info/rubik",
     "links" : [
